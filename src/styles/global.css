@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@layer base {
+  * {
+    @apply m-0 scroll-smooth p-0;
+  }
+
+  body {
+    @apply m-auto bg-light px-5 font-opensans text-dark transition-colors duration-150 ease-linear dark:bg-dark dark:text-light sm:max-w-lg md:max-w-none md:px-24 lg:max-w-7xl;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #8d99ae #8d99ae;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #d5d9db;
+    border-radius: 5px;
+  }
+
+  .dark *::-webkit-scrollbar-track {
+    background: #282a3e;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #8d99ae;
+    border-radius: 14px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #717b8b;
+  }
+}
+
+@layer utilities {
+  .sidenav {
+    @apply right-0;
+  }
+
+  .link {
+    @apply relative before:absolute before:bottom-0 before:left-0 before:block before:h-[2px] before:w-full before:origin-top-left before:scale-x-0 before:bg-primary before:transition before:duration-300 before:ease-in-out before:content-[''] before:hover:scale-x-100;
+  }
+
+  .icon {
+    @apply text-maingray transition-all ease-in hover:-translate-y-1 hover:text-primary;
+  }
+
+  .job ul li {
+    @apply mb-2 pl-7 before:absolute before:left-0 before:text-xl before:font-bold before:leading-none before:text-primary before:content-['»'];
+  }
+}
