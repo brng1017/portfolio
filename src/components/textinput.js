@@ -7,7 +7,7 @@ const TextInput = ({ name, type, inner }) => {
         type={type}
         name={name}
         id={name}
-        class=' peer block w-full appearance-none border-0 border-b-2 border-maingray bg-transparent px-0 py-2.5 text-sm text-dark focus:border-primary focus:outline-none focus:ring-0 dark:border-maingray dark:text-light dark:focus:border-primary'
+        className=' peer block w-full appearance-none border-0 border-b-2 border-maingray bg-transparent px-0 py-2.5 text-sm text-dark focus:border-primary focus:outline-none focus:ring-0 dark:border-maingray dark:text-light dark:focus:border-primary'
         placeholder=' '
         required
       />

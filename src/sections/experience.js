@@ -55,7 +55,7 @@ const Experience = () => {
                 return (
                   <button
                     key={index}
-                    isActive={activeCard === index}
+                    // isActive={activeCard === index}
                     onClick={() => setActiveCard(index)}
                     className={` flex h-12 w-32 items-center justify-center whitespace-nowrap px-4 text-sm transition-all duration-300 ease-linear hover:text-primary md:text-base ${
                       activeCard === index ? 'text-primary' : 'text-maingray'

@@ -4,20 +4,20 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
  */
 
-const path = require("path");
+const path = require('path');
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
 exports.createPages = async ({ actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
   createPage({
-    path: "/using-dsg",
-    component: require.resolve("./src/templates/using-dsg.js"),
+    path: '/using-dsg',
+    component: require.resolve('./src/templates/using-dsg.js'),
     context: {},
     defer: true,
-  })
-}
+  });
+};
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -25,7 +25,26 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       alias: {
         '@components': path.resolve(__dirname, 'src/components'),
         '@sections': path.resolve(__dirname, 'src/sections'),
-      }
-    }
-  })
-}
+      },
+    },
+  });
+};
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === 'build-html' || stage === 'develop-html') {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /scrollreveal/,
+            use: loaders.null(),
+          },
+          {
+            test: /miniraf/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    });
+  }
+};

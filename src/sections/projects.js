@@ -18,6 +18,7 @@ const Projects = () => {
     query {
       projects: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/src/content/projects/" } }
+        sort: { frontmatter: { number: ASC } }
       ) {
         edges {
           node {
@@ -64,7 +65,7 @@ const Projects = () => {
       >
         {projectData &&
           projectData.map(({ node }, index) => (
-            <Project node={node} index={index} />
+            <Project key={index} node={node} index={index} />
           ))}
       </div>
     </section>

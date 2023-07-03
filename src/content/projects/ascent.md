@@ -1,4 +1,5 @@
 ---
+number: 1
 title: 'Ascent Lion Dance Website'
 github: 'https://github.com/brng1017'
 url: 'https://ascentliondance.org/'
