@@ -67,7 +67,7 @@ const Contact = () => {
         <TextInput name='email' type='email' inner='Email address' />
         <TextInput name='subject' type='text' inner='Subject' />
 
-        <div class='relative mb-3' data-te-input-wrapper-init>
+        <div className='relative mb-3' data-te-input-wrapper-init>
           <textarea
             className=' peer block w-full appearance-none border-0 border-b-2 border-maingray bg-transparent px-0 py-2.5 text-sm text-dark focus:border-primary focus:outline-none focus:ring-0 dark:border-maingray dark:text-light dark:focus:border-primary'
             name='message'

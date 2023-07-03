@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 
@@ -18,12 +17,12 @@ const Project = ({ node, index }) => {
           image={cover}
           alt={title}
         />
-        <Link
+        <a
           className=' absolute left-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100'
-          to={url ? url : '#'}
+          href={url ? url : github ? github : '#'}
           target='_blank'
           rel='noopener noreferrer'
-        />
+        ></a>
       </div>
 
       <div className=' relative flex flex-col items-start justify-start gap-1 overflow-hidden p-4'>
@@ -43,24 +42,24 @@ const Project = ({ node, index }) => {
 
         <div className=' flex flex-row items-center justify-start'>
           {github && (
-            <Link
+            <a
               className=' icon py-3 pr-3 text-xl'
-              to={github}
+              href={github}
               target='_blank'
               rel='noopener noreferrer'
             >
               <FiGithub />
-            </Link>
+            </a>
           )}
           {url && (
-            <Link
+            <a
               className=' icon py-3 pr-3 text-xl'
-              to={url}
+              href={url}
               target='_blank'
               rel='noopener noreferrer'
             >
               <FiExternalLink />
-            </Link>
+            </a>
           )}
         </div>
       </div>

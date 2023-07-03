@@ -14,6 +14,9 @@ module.exports = {
     author: `Bryant Nguyen`,
     siteUrl: `https://bryanttnguyen.com/`,
   },
+  flags: {
+    DEV_SSR: true,
+  },
   plugins: [
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
@@ -41,11 +44,8 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/logo-bg.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo-bg.png`,
       },
     },
   ],
