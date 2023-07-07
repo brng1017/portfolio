@@ -11,8 +11,8 @@ const Projects = () => {
 
   useEffect(() => {
     sr.reveal(revealHeader.current, srConfig());
-    sr.reveal('.project', srConfig(undefined, undefined, 200));
-  });
+    sr.reveal('.project', srConfig(undefined, 200));
+  }, []);
 
   const data = useStaticQuery(graphql`
     query {

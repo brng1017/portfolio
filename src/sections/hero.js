@@ -17,7 +17,7 @@ const Hero = () => {
   useEffect(() => {
     revealHero.forEach((ref, index) => {
       if (ref.current) {
-        sr.reveal(ref.current, srConfig(1000 + index * 100));
+        sr.reveal(ref.current, srConfig(800 + index * 100, undefined, '#home'));
       }
     });
   }, []);

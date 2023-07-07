@@ -9,7 +9,7 @@ const Experience = () => {
 
   useEffect(() => {
     sr.reveal(revealContainer.current, srConfig());
-  });
+  }, []);
 
   const data = useStaticQuery(graphql`
     query {

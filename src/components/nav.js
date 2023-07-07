@@ -14,7 +14,10 @@ const Nav = ({ darkMode, toggleDarkMode, scroll }) => {
 
   useEffect(() => {
     revealLinks.forEach((ref, index) => {
-      sr.reveal(ref.current, srConfig(index * 100));
+      sr.reveal(
+        ref.current,
+        srConfig(index * 100, undefined, undefined, '#navbar')
+      );
     });
   }, []);
 
@@ -24,6 +27,7 @@ const Nav = ({ darkMode, toggleDarkMode, scroll }) => {
 
   return (
     <nav
+      id='navbar'
       className={` fixed left-0 top-0 z-50 flex w-full items-center justify-between px-5 transition-all duration-150 ease-linear ${
         scroll ? ' h-14 bg-lighter dark:bg-darker' : ' h-20 bg-transparent'
       }`}
