@@ -12,7 +12,7 @@ const Contact = () => {
 
   useEffect(() => {
     sr.reveal(revealContainer.current, srConfig());
-  });
+  }, []);
 
   const sendEmail = e => {
     e.preventDefault();

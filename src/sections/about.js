@@ -15,7 +15,7 @@ const About = () => {
 
   useEffect(() => {
     sr.reveal(revealContainer.current, srConfig());
-  });
+  }, []);
 
   return (
     <section
