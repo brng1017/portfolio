@@ -3,11 +3,11 @@ import { srConfig } from '../config';
 import sr from '../utils/sr';
 
 const skills = [
-  { name: 'JavaScript (ES6)', percent: 80 },
-  { name: 'TypeScript', percent: 50 },
-  { name: 'Express.js', percent: 60 },
-  { name: 'Passport.js', percent: 50 },
-  { name: 'React', percent: 60 },
+  { name: 'TypeScript', percent: 90 },
+  { name: 'Python', percent: 85 },
+  { name: 'Node.js', percent: 85 },
+  { name: 'React', percent: 80 },
+  { name: 'PostgreSQL', percent: 70 },
 ];
 
 const About = () => {
